@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        .main-menu{
+            list-style-type: none;
+            padding: 0em;
+            margin: 0em;
+
+            background-color: lightgray;
+
+        }
+        .main-menu > li{
+            display: inline-block;
+        }
+        .main-menu > li > a{
+            display: inline-block;
+            padding: 0.5em;
+            text-decoration: none;
+            color: white;  
+        }
+        .main-menu > li > a:hover{
+            background-color: black;
+        }
+        .item-inside-sub-menu{
+            position: relative;
+        }
+        .sub-menu{
+            display:none;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            white-space: nowrap;
+            padding: 1em;
+            background-color: lightgray;
+
+        }
+        .item-inside-sub-menu:hover .sub-menu{
+            display: block;
+        } 
+        
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="main-menu">
+            <li><a href="/Link1">Link1</a></li>
+            <li class="item-inside-sub-menu">
+                <a href="/Link2">Link2</a>
+                <ul class="sub-menu">
+                <li><a href="/Link2/Item1">Item1</a></li>
+                <li><a href="/Link2/Item2">Item2</a></li>
+                <li><a href="/Link2/Item3">Item3</a></li>
+                </ul>
+            </li>    
+            <li><a href="/Link3">Link3</a></li>
+            
+          </ul>
+    </nav>
+
+    
+</body>
+</html>
